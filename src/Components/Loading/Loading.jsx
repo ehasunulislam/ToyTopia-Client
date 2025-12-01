@@ -8,7 +8,7 @@ const Loading = () => {
       <Lottie
         animationData={assets.loading}
         loop={true}
-        style={{ width: 200, height: 200 }}
+        style={{ width: 400, height: 400 }}
       />
     </div>
   );

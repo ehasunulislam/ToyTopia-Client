@@ -1,21 +1,24 @@
 import React, { useEffect, useState } from "react";
-import HomeCardDesign from "../CardDesign/HomeCardDesign/HomeCardDesign";
 import { Link } from "react-router";
 import AllCardDesign from "../CardDesign/AllCardsDesign/AllCardDesign";
 import Loading from "../Loading/Loading";
+import useAxios from "../Hooks/useAxios";
 
 const ShowAllCards = () => {
   const [toysData, setToysData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const axios = useAxios();
 
   useEffect(() => {
-    fetch("/toysData.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setToysData(data);
-        setLoading(false);
-      });
-  }, []);
+    axios.get('/toys-all')
+    .then(res => {
+      setToysData(res.data);
+      setLoading(false)
+    }) 
+    .catch(err => {
+      console.log(err.message)
+    })
+  }, [axios]);
 
   if (loading) {
     return <Loading></Loading>;
