@@ -15,6 +15,7 @@ import ShowAllCardLayout from "../Layout/ShowAllCardLayout/ShowAllCardLayout";
 // import ShowAllCard from "../pages/ShowAllCards/ShowAllCard";
 import ShowAllCards from "../Components/ShowAllCards/ShowAllCards";
 import Error from "../Components/Error/Error";
+import SellProduct from "../pages/Sell-A-Product/SellProduct";
 
 
 export const routes = createBrowserRouter(
@@ -39,7 +40,11 @@ export const routes = createBrowserRouter(
                     element: <PrivateRoutes>
                         <ProductDetails></ProductDetails>
                     </PrivateRoutes>
-                }
+                },
+                {
+                    path: "sell-product",
+                    element: <SellProduct></SellProduct>
+                },
             ]
         },
         {

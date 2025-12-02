@@ -12,7 +12,7 @@ const ProductDetailsLayout = () => {
         <Navbar></Navbar>
       </header>
 
-      <main className="w-11/12 mx-auto">
+      <main className="w-11/12 mx-auto py-5">
         <section>
           <Outlet></Outlet>
         </section>

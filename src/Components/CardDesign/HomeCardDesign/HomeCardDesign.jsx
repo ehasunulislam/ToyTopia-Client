@@ -23,7 +23,7 @@ const HomeCardDesign = ({
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">{toyName}</h2>
+          <h2 className="card-title text-[1rem]">{toyName}</h2>
 
           <div className="flex justify-between items-center">
             <p>Price: <span className="text-green-800">{price} $</span></p>

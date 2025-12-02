@@ -36,7 +36,7 @@ const HomeCard = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-2 sm:gap-8 lg:gap-10 mt-10">
         {toysData.slice(0, 6).map((item) => (
-          <Link key={item.id} to={`/product/productDetails/${item.toyId}`}>
+          <Link key={item._id} to={`/product/productDetails/${item._id}`}>
             <HomeCardDesign
               pictureURL={item.pictureURL}
               toyName={item.toyName}

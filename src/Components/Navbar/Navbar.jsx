@@ -19,6 +19,32 @@ const Navbar = () => {
       });
   };
 
+  // 1. Define your base links here
+  const links = [
+    { path: "/", title: "Home" },
+    { path: "/card/showAllCards", title: "All Toys" },
+    { path: "/contact", title: "Contact" },
+  ];
+
+  // 2. Add protected links if user is logged in
+  if (user) {
+    links.push({ path: "/product/sell-product", title: "Sell Product" });
+    links.push({ path: "/auth/myProfile", title: "My Profile" });
+  }
+
+  // 3. Generate the JSX for the links
+  const navLinks = links.map((link) => (
+    <NavLink 
+      key={link.path} 
+      to={link.path} 
+      className={({ isActive }) => 
+        `me-3 ${isActive ? "font-bold text-[#0F83B2]" : ""}`
+      }
+    >
+      {link.title}
+    </NavLink>
+  ));
+
   return (
     <div className="navbar mt-10 px-3 md:px-8 lg:px-10">
       <div className="navbar-start">
@@ -26,18 +52,15 @@ const Navbar = () => {
           <img src={assets.logo} alt="logo" className="w-30" />
         </Link>
       </div>
+
+      {/* Desktop Menu */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <NavLink to="/" className="me-3">Home</NavLink>
-          <NavLink to="/card/showAllCards" className="me-3">All Toys</NavLink>
-          <NavLink to="/contact" className="me-3">Contact</NavLink>
-
-          {user && (
-            <NavLink to="/auth/myProfile" className="me-3">My Profile</NavLink>
-          )}
+          {navLinks}
         </ul>
       </div>
-      <div className="navbar-end ">
+
+      <div className="navbar-end">
         <div className="relative pe-3 group">
           {user && (
             <>
@@ -72,16 +95,14 @@ const Navbar = () => {
           </Link>
         )}
 
-        {/* mobile dropdown */}
+        {/* Mobile Dropdown */}
         <div className="dropdown relative">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <RiMenu2Line />
           </div>
           <ul className="menu menu-sm dropdown-content bg-base-100 rounded-box z-20 mt-3 w-52 p-2 shadow right-0">
-            <NavLink to="/" className="me-3">Home</NavLink>
-             <NavLink to="/contact" className="me-3">Contact</NavLink>
-            <NavLink to="/card/showAllCards" className="me-3">Service</NavLink>
-            {user && <NavLink to="/auth/myProfile" className="me-3">My Profile</NavLink>}
+             {/* Dynamic links reused here */}
+             {navLinks}
           </ul>
         </div>
       </div>
