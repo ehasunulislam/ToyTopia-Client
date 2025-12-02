@@ -23,12 +23,13 @@ const Navbar = () => {
   const links = [
     { path: "/", title: "Home" },
     { path: "/card/showAllCards", title: "All Toys" },
-    { path: "/contact", title: "Contact" },
+    // { path: "/contact", title: "Contact" },
   ];
 
   // 2. Add protected links if user is logged in
   if (user) {
     links.push({ path: "/product/sell-product", title: "Sell Product" });
+    links.push({ path: "/dashboard/sell-info", title: "Admin Dashboard" });
     links.push({ path: "/auth/myProfile", title: "My Profile" });
   }
 
@@ -68,7 +69,7 @@ const Navbar = () => {
                 <img
                   src={user.photoURL}
                   alt="user image"
-                  className="w-10 h-10 rounded-full cursor-pointer"
+                  className="w-8 h-8 rounded-full cursor-pointer"
                   referrerPolicy="no-referrer"
                 />
               </Link>
@@ -81,7 +82,7 @@ const Navbar = () => {
 
         {user ? (
           <button
-            className="btn bg-[#0F83B2] text-white rounded-full px-6"
+            className="btn bg-[#0F83B2] text-white"
             onClick={handleSignOut}
           >
             Log Out

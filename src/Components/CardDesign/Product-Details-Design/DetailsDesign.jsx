@@ -19,7 +19,7 @@ const DetailsDesign = ({
           <img src={pictureURL} alt={toyName} className="w-[300px]" />
         </div>
 
-        <div className="seller-info pt-20">
+        <div className="seller-info pt-3 md:pt-10 lg:pt-20">
           <p className="text-[0.9rem] font-semibold">
             Seller name: {sellerName}
           </p>
@@ -32,7 +32,7 @@ const DetailsDesign = ({
         </div>
       </section>
 
-      <section className="pt-20 ">
+      <section className="pt-5 md:pt-10 lg:pt-10">
         <div className="space-y-2">
           <h3 className="text-2xl">{toyName}</h3>
           <p>Subcategory: {subCategory}</p>

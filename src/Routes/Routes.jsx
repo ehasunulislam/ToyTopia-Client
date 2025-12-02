@@ -16,6 +16,9 @@ import ShowAllCardLayout from "../Layout/ShowAllCardLayout/ShowAllCardLayout";
 import ShowAllCards from "../Components/ShowAllCards/ShowAllCards";
 import Error from "../Components/Error/Error";
 import SellProduct from "../pages/Sell-A-Product/SellProduct";
+import DashBoardLayout from "../Layout/DashBoardLayout/DashBoardLayout";
+import SellInfo from "../pages/Dash-Board/Sell-info/SellInfo";
+
 
 
 export const routes = createBrowserRouter(
@@ -28,6 +31,16 @@ export const routes = createBrowserRouter(
                 {
                     index: true,
                     element: <Home></Home>,
+                }
+            ]
+        },
+        {
+            path: "card",
+            element: <ShowAllCardLayout></ShowAllCardLayout>,
+            children: [
+                {
+                    path: "showAllCards",
+                    element: <ShowAllCards></ShowAllCards>
                 }
             ]
         },
@@ -80,20 +93,20 @@ export const routes = createBrowserRouter(
             ]
         },
         {
+            path: "dashboard",
+            element: <PrivateRoutes><DashBoardLayout></DashBoardLayout></PrivateRoutes>,
+            children: [
+                {
+                    path: "sell-info",
+                    element: <SellInfo></SellInfo>
+                }
+            ]
+        },
+        {
             path: "contact",
             element: <PrivateRoutes>
                 <Contact></Contact>
             </PrivateRoutes>
         },
-        {
-            path: "card",
-            element: <ShowAllCardLayout></ShowAllCardLayout>,
-            children: [
-                {
-                    path: "showAllCards",
-                    element: <ShowAllCards></ShowAllCards>
-                }
-            ]
-        }
     ]
 )

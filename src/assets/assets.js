@@ -32,6 +32,7 @@ import s3 from "./s3.png"
 import s4 from "./s4.png"
 
 import loading from "./animation/loading.json";
+import sad from "./animation/sad.json";
 
 export const assets = {
     toolbar,
@@ -45,7 +46,7 @@ export const assets = {
     r1, r2, r3, r4,
     watch, truck, returns,
     error,
-    loading
+    loading, sad
 }
 
 export const findToys = [
