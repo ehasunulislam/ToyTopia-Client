@@ -1,5 +1,6 @@
 import React from "react";
 import { BsBoxArrowInRight } from "react-icons/bs";
+import { FaCartShopping } from "react-icons/fa6";
 import { IoMdInformationCircle } from "react-icons/io";
 import { TbHomeFilled } from "react-icons/tb";
 import { Link, Outlet } from "react-router";
@@ -59,6 +60,18 @@ const DashBoardLayout = () => {
               >
                 <IoMdInformationCircle size={25} />
                 <span className="is-drawer-close:hidden">Sell Information</span>
+              </Link>
+            </li>
+
+            {/* Buy Product */}
+            <li>
+              <Link
+                className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                data-tip="your cart"
+                to="/dashboard/your-cart"
+              >
+                <FaCartShopping size={25} />
+                <span className="is-drawer-close:hidden">your cart</span>
               </Link>
             </li>
           </ul>

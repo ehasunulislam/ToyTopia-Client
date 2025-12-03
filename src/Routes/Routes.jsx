@@ -18,6 +18,8 @@ import Error from "../Components/Error/Error";
 import SellProduct from "../pages/Sell-A-Product/SellProduct";
 import DashBoardLayout from "../Layout/DashBoardLayout/DashBoardLayout";
 import SellInfo from "../pages/Dash-Board/Sell-info/SellInfo";
+import BuyProduct from "../pages/Dash-Board/Buy-Product/BuyProduct";
+import Payment from "../pages/Dash-Board/Payment/Payment";
 
 
 
@@ -99,6 +101,14 @@ export const routes = createBrowserRouter(
                 {
                     path: "sell-info",
                     element: <SellInfo></SellInfo>
+                },
+                {
+                    path: "your-cart",
+                    element: <BuyProduct></BuyProduct>
+                },
+                {
+                    path: "payment/:productId",
+                    Component: Payment,
                 }
             ]
         },
