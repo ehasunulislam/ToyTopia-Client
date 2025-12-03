@@ -22,6 +22,7 @@ import BuyProduct from "../pages/Dash-Board/Buy-Product/BuyProduct";
 import Payment from "../pages/Dash-Board/Payment/Payment";
 import PaymentSuccess from "../pages/Dash-Board/Payment/PaymentSuccess";
 import PaymentCancel from "../pages/Dash-Board/Payment/PaymentCancel";
+import About from "../pages/About/About";
 
 
 
@@ -35,7 +36,11 @@ export const routes = createBrowserRouter(
                 {
                     index: true,
                     element: <Home></Home>,
-                }
+                },
+                {
+                    path: "about",
+                    Component: About,
+                },
             ]
         },
         {
@@ -50,7 +55,7 @@ export const routes = createBrowserRouter(
         },
         {
             path: "product",
-            element: <ProductDetailsLayout></ProductDetailsLayout>,
+            element: <PrivateRoutes><ProductDetailsLayout></ProductDetailsLayout></PrivateRoutes>,
             children: [
                 {
                     path: "productDetails/:id",
