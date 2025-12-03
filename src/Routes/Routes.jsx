@@ -20,6 +20,8 @@ import DashBoardLayout from "../Layout/DashBoardLayout/DashBoardLayout";
 import SellInfo from "../pages/Dash-Board/Sell-info/SellInfo";
 import BuyProduct from "../pages/Dash-Board/Buy-Product/BuyProduct";
 import Payment from "../pages/Dash-Board/Payment/Payment";
+import PaymentSuccess from "../pages/Dash-Board/Payment/PaymentSuccess";
+import PaymentCancel from "../pages/Dash-Board/Payment/PaymentCancel";
 
 
 
@@ -109,6 +111,14 @@ export const routes = createBrowserRouter(
                 {
                     path: "payment/:productId",
                     Component: Payment,
+                },
+                {
+                    path: "payment-success",
+                    Component: PaymentSuccess
+                },
+                {
+                    path: "payment-cancelled",
+                    Component: PaymentCancel,
                 }
             ]
         },
