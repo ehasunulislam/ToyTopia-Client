@@ -1,22 +1,87 @@
-Some npm packages for Project:
-
-1. tailwind.css and daisyui (Design);
-2. react-router (page-routing);
-3. react-icons (icons);
-4. react-toastify (for showing alert);
-5. swiper (for slider);
-6. firebase (for user authentication);
+# 📘 Project README
 
 
-Feature :
-
-1. user can register
-2. user can login/logout
-3. user can see their profile
-4. user can update their profile 
-5. private routing system
+## 📦 Project Dependencies Overview
+This project is built with a modern, scalable, and production‑ready React ecosystem. Below is a detailed breakdown of all the technologies used.
 
 
-project live link: 
-https://toystpia.ehasun.com/
+---
 
+
+## 🚀 Core Framework & Build Tools
+- **React 19** – Modern UI library for building interactive interfaces.
+- **Vite 7** – Ultra-fast build tool for modern web development.
+- **React Router v7** – Advanced routing system for smooth SPA navigation.
+
+
+---
+
+
+## 🎨 Styling & UI Enhancements
+- **Tailwind CSS v4** – Utility‑first CSS framework for rapid UI development.
+- **@tailwindcss/vite** – Optimized Tailwind integration with Vite.
+- **daisyUI** – Beautiful pre-styled UI components.
+- **Swiper** – Modern and touch-friendly slider/carousel.
+- **Lottie-React** – Lightweight JSON-based animations.
+- **React Icons** – Popular icon packs for flexible icon usage.
+
+
+---
+
+
+## 🔥 Backend & Data Management
+- **Firebase v12** – Authentication, database, hosting, and cloud services.
+- **Axios** – Promise-based HTTP client for clean and simple API calls.
+- **TanStack React Query** – Powerful server-state management and caching.
+
+
+---
+
+
+## 🧰 Forms, Validation & Feedback
+- **React Hook Form** – High-performance form handling.
+- **React Toastify** – Elegant toast notifications.
+- **SweetAlert2** – Beautiful alert & confirmation dialogs.
+
+
+---
+
+
+## 🔎 Development Tools
+- **ESLint** – Maintain consistent code quality.
+- **React Refresh Plugin** – Fast, reliable hot reloading.
+
+
+---
+
+
+## 📂 Scripts
+```json
+"scripts": {
+"dev": "vite",
+"build": "vite build",
+"lint": "eslint .",
+"preview": "vite preview"
+}
+```
+
+
+---
+
+
+## 📥 Installation
+```bash
+# Install dependencies
+yarn install # or npm install
+
+
+# Run development server
+yarn dev
+
+
+# Build for production
+yarn build
+```
+
+
+---
