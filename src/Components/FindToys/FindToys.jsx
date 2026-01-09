@@ -5,7 +5,7 @@ import Title from '../Title/Title'
 
 const FindToys = () => {
   return (
-    <div className='my-5'>
+    <div className='my-5 mt-15'>
         <div className='flex justify-center items-center'>
             <Title title1={<>Find the Perfect Toy</>} title2={<>Our Collections</>} />
         </div>
