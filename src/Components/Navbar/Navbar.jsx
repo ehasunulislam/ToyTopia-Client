@@ -31,7 +31,6 @@ const Navbar = () => {
   if (user) {
     links.push({ path: "/product/sell-product", title: "Sell Product" });
     links.push({ path: "/dashboard/sell-info", title: "Admin Dashboard" });
-    links.push({ path: "/auth/myProfile", title: "My Profile" });
   }
 
   // 3. Generate the JSX for the links

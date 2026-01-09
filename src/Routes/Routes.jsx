@@ -87,12 +87,13 @@ export const routes = createBrowserRouter(
                         <UpdatePassword></UpdatePassword>
                     </PrivateRoutes>
                 },
-                {
-                    path: "myProfile",
-                    element: <PrivateRoutes>
-                        <MyProfile></MyProfile>
-                    </PrivateRoutes>
-                },
+                // my profile routes
+                // {
+                //     path: "myProfile",
+                //     element: <PrivateRoutes>
+                //         <MyProfile></MyProfile>
+                //     </PrivateRoutes>
+                // },
                 {
                     path: "updateProfile",
                     element: <PrivateRoutes>
@@ -112,6 +113,10 @@ export const routes = createBrowserRouter(
                 {
                     path: "your-cart",
                     element: <BuyProduct></BuyProduct>
+                },
+                {
+                    path: "your-profile",
+                    element: <MyProfile></MyProfile>
                 },
                 {
                     path: "payment/:productId",

@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router";
 import { toast } from "react-toastify";
 
 const UpdateProfile = () => {
-  const { user, updateProfileFunction, setUser } = use(AuthContext);
+  const { user, updateProfileFunction } = use(AuthContext);
   const navigate = useNavigate();
 
   const handleUpdate = (e) => {
