@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useLocation } from "react-router";
+import { Link, useLocation } from "react-router";
 import { useQueryClient } from "@tanstack/react-query";
 import useAxios from "../../../Components/Hooks/useAxios";
 import useAuthInfo from "../../../Components/Hooks/useAuthInfo";
@@ -33,10 +33,12 @@ const PaymentSuccess = () => {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen">
       <Lottie animationData={assets.paymentSuccess} loop={true} />
-      <h2 className="text-[1rem] md:text-2xl mt-4">
+      <h2 className="text-[1rem] md:text-2xl">
         Your Payment is successful
       </h2>
       <p className="mt-2">Congratulation: {user.displayName}</p>
+
+      <Link to="/dashboard/your-cart" className="mt-4 bg-[#0F83B2] text-white px-4 py-2 rounded">Go back to your cart</Link>
     </div>
   );
 };
