@@ -65,7 +65,7 @@ const Navbar = () => {
         <div className="relative pe-3 group">
           {user && (
             <>
-              <Link to="/auth/myProfile">
+              <Link to="/dashboard/your-profile">
                 <img
                   src={user.photoURL}
                   alt="user image"
