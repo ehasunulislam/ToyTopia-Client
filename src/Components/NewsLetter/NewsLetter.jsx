@@ -49,7 +49,7 @@ const NewsLetter = () => {
           </label>
 
           {/* Button */}
-          <button className="btn btn-neutral join-item mt-3 sm:mt-0 sm:ml-2 w-full sm:w-auto rounded bg-[#0F83B2]">
+          <button className="btn btn-neutral join-item mt-3 sm:mt-0 sm:ml-2 w-full sm:w-auto bg-[#0F83B2] border-0 rounded-[10px]">
             Join
           </button>
         </div>
